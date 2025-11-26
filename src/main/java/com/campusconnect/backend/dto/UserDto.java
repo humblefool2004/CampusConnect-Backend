@@ -1,4 +1,4 @@
-package com.campusconnect.backend.entity;
+package com.campusconnect.backend.dto;
 
 
 import lombok.AllArgsConstructor;

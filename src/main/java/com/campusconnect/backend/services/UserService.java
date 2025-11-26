@@ -1,6 +1,6 @@
 package com.campusconnect.backend.services;
 
-import com.campusconnect.backend.entity.UserDto;
+import com.campusconnect.backend.dto.UserDto;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
