@@ -1,24 +1,21 @@
 package com.campusconnect.backend.services;
 
+import com.campusconnect.backend.dto.AddUserRequestDto;
 import com.campusconnect.backend.dto.UserDto;
-import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-@Service
-public class UserService {
+public interface UserService {
+    List<UserDto> getAllUsers();
 
-    public UserDto getUser(){
-        return new UserDto(1,"Saheel","saheel@kiit.com");
-    }
+    UserDto getUserById(Long id);
 
-    public List<UserDto> getAllUsers(){
-        List<UserDto> users = new ArrayList<>();
-        users.add(getUser());
-        users.add(new UserDto(2,"kajal", "kajal@kiit.com"));
-        users.add(new UserDto(3,"kamal","kamal@kiit.com"));
-        return users;
-    }
+    UserDto createNewUser(AddUserRequestDto addUserRequestDto);
 
+    void deleteUserById(Long id);
+
+    UserDto updateUser(Long id, AddUserRequestDto addUserRequestDto);
+
+    UserDto updateUser(Long id, Map<String, Object> updates);
 }
